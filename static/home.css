@@ -6,13 +6,17 @@ h3.home-content {
 }
 
 div#container {
-    margin: 0 auto;
-    height: 20em;
+    margin: auto;
+    text-align: center;
+    height: 24em;
     min-width: 20em;
-    max-width: 30em;
+    max-width: 60em;
 }
 
 div.hot-data {
     text-align: center;
-    margin-top: 2em;
 }
+div#analyse{
+    margin-top: 1em;
+}
+

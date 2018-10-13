@@ -36,3 +36,22 @@ def home(request):
     context['yesterday_hot_data'] = get_yesterday_hot_data(blog_content_type)
     context['hot_blogs_for_7_days'] = hot_blogs_for_7_days
     return render(request, 'home.html', context)
+
+def detial(request):
+    blog_content_type = ContentType.objects.get_for_model(Blog)
+    dates, read_nums = get_seven_days_read_data(blog_content_type)
+
+    # 获取7天热门博客的缓存数据
+    hot_blogs_for_7_days = cache.get('hot_blogs_for_7_days')
+    if hot_blogs_for_7_days is None:
+        hot_blogs_for_7_days = get_7_days_hot_blogs()
+        cache.set('hot_blogs_for_7_days', hot_blogs_for_7_days, 3600)
+
+    context = {}
+    context['dates'] = dates
+    context['read_nums'] = read_nums
+    context['today_hot_data'] = get_today_hot_data(blog_content_type)
+    context['yesterday_hot_data'] = get_yesterday_hot_data(blog_content_type)
+    context['hot_blogs_for_7_days'] = hot_blogs_for_7_days
+    return render(request, 'blog/blog_list.html', context)
+
