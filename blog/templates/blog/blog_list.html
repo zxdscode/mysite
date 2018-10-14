@@ -4,11 +4,32 @@
 {% block nav_blog_active %}active{% endblock %}
 {% load comment_tags %}
 {% load likes_tags %}
+{% load static %}
+
 
 {% block header_extends %}
     <link rel="stylesheet" href="{% static 'blog/blog.css' %}">
     <link rel="stylesheet" href="{% static 'home.css' %}">
-{#    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>#}
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Explore Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+
+	<!-- Custom Theme files -->
+	<link href="/static/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	<link href="/static/chocolat.css"  rel="stylesheet" type="text/css" media="screen">
+	<!-- chocolate css for gallery light box -->
+	<link href="/static/style.css" type="text/css" rel="stylesheet" media="all">
+	<link href="/static/font-awesome.css" rel="stylesheet">
+	<!-- font-awesome icons -->
+	<!--//Custom Theme files-->
+
+	<!-- web-fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+	    rel="stylesheet">
+	<!-- //web-fonts -->
 {% endblock %}
 
 
@@ -114,4 +135,18 @@
             </div>
         </div>
     </div>
+    <script src="/static/js/jquery-2.2.3.min.js"></script>
+    <script>
+		$(window).scroll(function () {
+			if ($(window).scrollTop() >= 830) {
+				$('nav').addClass('fixed-header');
+			} else {
+				$('nav').removeClass('fixed-header');
+			}
+		});
+
+		/* scrollTop() >= 240
+		   Should be equal the the height of the header
+		 */
+	</script>
 {% endblock %}

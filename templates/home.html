@@ -16,7 +16,11 @@
 		}
 	</script>
     <link rel="stylesheet" href="{% static 'home.css' %}">
-
+    <link href="/static/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	<link href="/static/chocolat.css"  rel="stylesheet" type="text/css" media="screen">
+	<!-- chocolate css for gallery light box -->
+	<link href="/static/style.css" type="text/css" rel="stylesheet" media="all">
+	<link href="/static/font-awesome.css" rel="stylesheet">
     <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
 
 
@@ -623,7 +627,7 @@
 				</div>
 				<div class="modal-body">
 					<div class="model-info">
-						<img src="images/bg2.jpg" alt="" />
+						<img src="media/images/bg2.jpg" alt="" />
 						<p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio eget nunc. Pellentesque
 							ac fermentum diam. Integer eu facilisis nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis
 							porttitor quis. Suspendisse ultrices hendrerit massa. Nam id metus id tellus ultrices ullamcorper. Cras tempor massa
@@ -633,10 +637,11 @@
 			</div>
 		</div>
 	</div>
-    <script src="static/js/jquery-2.2.3.min.js"></script>
+
+    <script src="/static/js/jquery-2.2.3.min.js"></script>
     <script>
 		$(window).scroll(function () {
-			if ($(window).scrollTop() >= 730) {
+			if ($(window).scrollTop() >= 830) {
 				$('nav').addClass('fixed-header');
 			} else {
 				$('nav').removeClass('fixed-header');
@@ -647,7 +652,8 @@
 		   Should be equal the the height of the header
 		 */
 	</script>
-    <script src="static/js/jquery.chocolat.js"></script>
+
+    <script src="/static/js/jquery.chocolat.js"></script>
 	<script>
 		$(function () {
 			$('.filtr-item a').Chocolat();
@@ -655,8 +661,8 @@
 	</script>
 	<!-- //PopUp-Box-JavaScript -->
 	<!-- fliter-JavaScript -->
-	<script src="static/js/jquery.filterizr.js"></script>
-	<script src="static/js/controls.js"></script>
+	<script src="/static/js/jquery.filterizr.js"></script>
+	<script src="/static/js/controls.js"></script>
 	<script>
 		$(function () {
 			$('.filtr-container').filterizr();
@@ -665,8 +671,8 @@
 	<!-- //fliter-JavaScript -->
 
 	<!-- start-smooth-scrolling -->
-	<script  src="static/js/move-top.js"></script>
-	<script src="static/js/easing.js"></script>
+	<script  src="/static/js/move-top.js"></script>
+	<script src="/static/js/easing.js"></script>
 	<script>
 		jQuery(document).ready(function ($) {
 			$(".scroll").click(function (event) {
@@ -701,7 +707,7 @@
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="static/js/bootstrap.js"></script>
+{#	<script src="static/js/bootstrap.js"></script>#}
 
 
 

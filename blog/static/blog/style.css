@@ -62,8 +62,7 @@ body a:focus {
 .header-agileinfo {
     background: url(../media/images/bg.jpg) no-repeat center;
     background-size: cover;
-    min-height: 530px;
-
+    min-height: 730px;
 }
 
 .header-banner {
@@ -82,7 +81,7 @@ body a:focus {
 
 .fixed-header {
     position: fixed;
-    top: 50px;
+    top: 0;
     left: 0;
     width: 100%;
 }
